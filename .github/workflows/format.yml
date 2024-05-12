@@ -24,4 +24,3 @@ jobs:
             run: mix deps.get
           - name: Check format
             run: mix format --check-formatted
-            run: mix format --check-formatted
