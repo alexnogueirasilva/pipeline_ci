@@ -19,7 +19,7 @@ jobs:
             id: mix-format-cache
             with:
               path: ~/.mix
-              key: ${{ runner.os }}-mix-${{ matrix.otp }}-${{ matrix.elixir }}-deps-${{ hashFiles(format('{0}-{1}'), github.workspace, '/mix.lock') }}
+              key: ${{ runner.os }}-mix-${{ matrix.otp }}-${{ matrix.elixir }}-deps-${{ hashFiles(format('{0}-{1}', github.workspace, '/mix.lock')) }}
           - name: Install dependencies
             run: mix deps.get
           - name: Check format
