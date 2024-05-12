@@ -6,8 +6,8 @@ import Config
 # to provide built-in test partitioning in CI environment.
 # Run `mix help test` for more information.
 config :pipeline_ci, PipelineCi.Repo,
-  username: "admin",
-  password: "Bruna2012*",
+  username: "postgres",
+  password: "postgres",
   hostname: "localhost",
   database: "pipeline_ci_test#{System.get_env("MIX_TEST_PARTITION")}",
   pool: Ecto.Adapters.SQL.Sandbox,
